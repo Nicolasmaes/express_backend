@@ -51,3 +51,5 @@ server.listen(port);
 // Nous importons app et indiquons son port comme précédemment.
 // Nous écoutons le port prévu dans l'environnement du server, ou sinon le port 3000
 // Nous avons installé nodemon pour ne pas avoir à redémarrer node server à chaque modification de fichier. Désormais nous démarrerons le back-end avec nodemon server.
+
+// mongodb+srv://user:root@cluster0.vuyfrfu.mongodb.net/?retryWrites=true&w=majority
