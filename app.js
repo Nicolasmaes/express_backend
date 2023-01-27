@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const Product = require("./models/Product");
 
@@ -59,6 +60,10 @@ app.use("/api/stuff", stuffRoutes);
 // MiddleWare User
 
 app.use("/api/auth", userRoutes);
+
+// Pour l'upload de fichier
+
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 // MiddleWare Product
 
