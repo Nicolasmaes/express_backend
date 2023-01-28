@@ -67,10 +67,8 @@ exports.deleteThing = (req, res, next) => {
         fs.unlink(`images/${filename}`, () => {
           Thing.deleteOne({ _id: req.params.id })
             .then(() => {
-              res.status(200).json({ message: "Objet supprimé !" });
+              res.status(200).json({ thing });
             })
-            // .then(() => { res.status(200).json({thing})})
-            // cette ligne doit être testée.
             .catch(error => res.status(401).json({ error }));
         });
       }
